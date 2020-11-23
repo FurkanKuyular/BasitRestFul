@@ -11,17 +11,8 @@
             "./config/routes/annotations.yaml"
         ]
     },
-    "doctrine/instantiator": {
-        "version": "1.4.0"
-    },
     "doctrine/lexer": {
         "version": "1.2.1"
-    },
-    "jms/metadata": {
-        "version": "2.3.0"
-    },
-    "jms/serializer": {
-        "version": "3.10.0"
     },
     "psr/cache": {
         "version": "1.0.1"
@@ -158,6 +149,29 @@
     "symfony/service-contracts": {
         "version": "v2.2.0"
     },
+    "symfony/translation-contracts": {
+        "version": "v2.3.0"
+    },
+    "symfony/twig-bridge": {
+        "version": "v4.4.16"
+    },
+    "symfony/twig-bundle": {
+        "version": "4.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.4",
+            "ref": "15a41bbd66a1323d09824a189b485c126bbefa51"
+        },
+        "files": [
+            "./config/packages/test/twig.yaml",
+            "./config/packages/twig.yaml",
+            "./templates/base.html.twig"
+        ]
+    },
+    "symfony/twig-pack": {
+        "version": "v1.0.1"
+    },
     "symfony/var-dumper": {
         "version": "v4.4.16"
     },
@@ -166,5 +180,11 @@
     },
     "symfony/yaml": {
         "version": "v4.4.16"
+    },
+    "twig/extra-bundle": {
+        "version": "v3.1.1"
+    },
+    "twig/twig": {
+        "version": "v3.1.1"
     }
 }
