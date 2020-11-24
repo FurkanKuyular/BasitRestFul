@@ -38,13 +38,21 @@ class Orders
     private $address;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=50)
      */
     private $shippingDate;
 
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 
     public function getOrderCode(): ?string
@@ -95,15 +103,19 @@ class Orders
         return $this;
     }
 
-    public function getShippingDate(): ?\DateTimeInterface
+    /**
+     * @return mixed
+     */
+    public function getShippingDate()
     {
         return $this->shippingDate;
     }
 
-    public function setShippingDate(\DateTimeInterface $shippingDate): self
+    /**
+     * @param mixed $shippingDate
+     */
+    public function setShippingDate($shippingDate): void
     {
         $this->shippingDate = $shippingDate;
-
-        return $this;
     }
 }
