@@ -3,8 +3,8 @@
 namespace App\Repository;
 
 use App\Entity\Orders;
-use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
 /**
  * @method Orders|null find($id, $lockMode = null, $lockVersion = null)
@@ -47,4 +47,14 @@ class OrdersRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    /**
+     * @return array
+     */
+    public function getAllOrders(): array
+    {
+        return $this->createQueryBuilder('o')
+            ->getQuery()
+            ->getArrayResult();
+    }
 }

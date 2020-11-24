@@ -4,11 +4,12 @@ namespace App\Entity;
 
 use App\Repository\UsersRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=UsersRepository::class)
  */
-class Users
+class Users implements UserInterface
 {
     /**
      * @ORM\Id
@@ -20,7 +21,7 @@ class Users
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $userName;
+    private $username;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -32,19 +33,24 @@ class Users
      */
     private $isActive;
 
+    /**
+     * @ORM\Column(type="array")
+     */
+    private $roles;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUserName(): ?string
+    public function getUsername(): ?string
     {
-        return $this->userName;
+        return $this->username;
     }
 
-    public function setUserName(string $userName): self
+    public function setUsername(string $username): self
     {
-        $this->userName = $userName;
+        $this->username = $username;
 
         return $this;
     }
@@ -71,5 +77,28 @@ class Users
         $this->isActive = $isActive;
 
         return $this;
+    }
+
+    public function getRoles()
+    {
+        return ['ROLE_USER'];
+    }
+
+    /**
+     * @param mixed $roles
+     */
+    public function setRoles($roles)
+    {
+        $this->roles = $roles;
+    }
+
+    public function getSalt()
+    {
+        // TODO: Implement getSalt() method.
+    }
+
+    public function eraseCredentials()
+    {
+        // TODO: Implement eraseCredentials() method.
     }
 }
