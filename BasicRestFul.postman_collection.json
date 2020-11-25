@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "9c4c660d-8dd3-4a24-bc0b-3febece43d9d",
+		"name": "BasicRestFul",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"furkan\",\r\n    \"password\":\"123123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{basicRestFul}}/api/login"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MDYyNjA5MjgsImV4cCI6MTYwNjI2NDUyOCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZnVya2FuIn0.WO-dKMgwnv8h9RE-fUTJaZQM6h6yDtEYX0vlbED6KssLPAD99qdcyiYS9JVAoJ11_8PcVpgaJAEaSAeoXlCoTCxgvvnKjhKWbHEsWI7JHNV943wkHo6GhCRO-Stvo2Uxk4GWj3K3bXNpGCcxfOOaMqMhEI8IxfXgPrmHp4A3cdsG4DfH0q1Rs9ybAlutbJuF_AHCT_x5wJiW5rK0T7lztIg7BQe7cCm7jdTN1mKyJkA4Hhbw2EEu0twMcKWeW78-MmDIuiF7vYi81yV_0XPyxxaaJr5O0Nrux_hPekKpy-BAn4xByzEun6N7vuLjnjXRwt9wWpFWPR3DhtxbiCDSzi6a9H0WOMfHHkr_eUwizWEyc06ZVsgKtj4F6araCUhgTZ2ZKzKLdpJYNO0YQsAWkYfMQX0RWMtZoKLljN3J2oM3cddxH-Efoka6TnN43id4INDyiF37OpYQih8RU3b1gS8_7g_298QQ_QMrDcG0uWIg2Q58hN6prSZHSnZ468uy3rWpPrt7jGg5A1GCo2Y6ozLuPiXr6a4AGm0G9JJMVeE_--3matxJHKS5RrM2-QOGDN3OtPjMlUQHRGTBHf5HqO6P1h_dLoFa9rK-rC94SMIGwR-2jErB34CdRvwWGieIjEqmNsnmlpPJWy1gIcaMpW2recjGxgkQzM3ojxCXnwo"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderCode\": \"3687\",\r\n    \"productId\": 9,\r\n    \"quantity\": 2,\r\n    \"address\": \"İstanbul\",\r\n    \"shippingDate\": \"25/11/2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{basicRestFul}}/api/orders"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MDYyNjA5MjgsImV4cCI6MTYwNjI2NDUyOCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZnVya2FuIn0.WO-dKMgwnv8h9RE-fUTJaZQM6h6yDtEYX0vlbED6KssLPAD99qdcyiYS9JVAoJ11_8PcVpgaJAEaSAeoXlCoTCxgvvnKjhKWbHEsWI7JHNV943wkHo6GhCRO-Stvo2Uxk4GWj3K3bXNpGCcxfOOaMqMhEI8IxfXgPrmHp4A3cdsG4DfH0q1Rs9ybAlutbJuF_AHCT_x5wJiW5rK0T7lztIg7BQe7cCm7jdTN1mKyJkA4Hhbw2EEu0twMcKWeW78-MmDIuiF7vYi81yV_0XPyxxaaJr5O0Nrux_hPekKpy-BAn4xByzEun6N7vuLjnjXRwt9wWpFWPR3DhtxbiCDSzi6a9H0WOMfHHkr_eUwizWEyc06ZVsgKtj4F6araCUhgTZ2ZKzKLdpJYNO0YQsAWkYfMQX0RWMtZoKLljN3J2oM3cddxH-Efoka6TnN43id4INDyiF37OpYQih8RU3b1gS8_7g_298QQ_QMrDcG0uWIg2Q58hN6prSZHSnZ468uy3rWpPrt7jGg5A1GCo2Y6ozLuPiXr6a4AGm0G9JJMVeE_--3matxJHKS5RrM2-QOGDN3OtPjMlUQHRGTBHf5HqO6P1h_dLoFa9rK-rC94SMIGwR-2jErB34CdRvwWGieIjEqmNsnmlpPJWy1gIcaMpW2recjGxgkQzM3ojxCXnwo"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderCode\": \"3687\",\r\n    \"productId\": 9,\r\n    \"quantity\": 2,\r\n    \"address\": \"İstanbul\",\r\n    \"shippingDate\": \"25/11/2020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{basicRestFul}}/api/orders/6"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MDYyNjA5MjgsImV4cCI6MTYwNjI2NDUyOCwicm9sZXMiOlsiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoiZnVya2FuIn0.WO-dKMgwnv8h9RE-fUTJaZQM6h6yDtEYX0vlbED6KssLPAD99qdcyiYS9JVAoJ11_8PcVpgaJAEaSAeoXlCoTCxgvvnKjhKWbHEsWI7JHNV943wkHo6GhCRO-Stvo2Uxk4GWj3K3bXNpGCcxfOOaMqMhEI8IxfXgPrmHp4A3cdsG4DfH0q1Rs9ybAlutbJuF_AHCT_x5wJiW5rK0T7lztIg7BQe7cCm7jdTN1mKyJkA4Hhbw2EEu0twMcKWeW78-MmDIuiF7vYi81yV_0XPyxxaaJr5O0Nrux_hPekKpy-BAn4xByzEun6N7vuLjnjXRwt9wWpFWPR3DhtxbiCDSzi6a9H0WOMfHHkr_eUwizWEyc06ZVsgKtj4F6araCUhgTZ2ZKzKLdpJYNO0YQsAWkYfMQX0RWMtZoKLljN3J2oM3cddxH-Efoka6TnN43id4INDyiF37OpYQih8RU3b1gS8_7g_298QQ_QMrDcG0uWIg2Q58hN6prSZHSnZ468uy3rWpPrt7jGg5A1GCo2Y6ozLuPiXr6a4AGm0G9JJMVeE_--3matxJHKS5RrM2-QOGDN3OtPjMlUQHRGTBHf5HqO6P1h_dLoFa9rK-rC94SMIGwR-2jErB34CdRvwWGieIjEqmNsnmlpPJWy1gIcaMpW2recjGxgkQzM3ojxCXnwo"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{basicRestFul}}/api/orders"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "58b2dc56-e0df-4b88-a3a2-6501eae1db26",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "84414c5c-c14b-44ed-b51e-ee7fb9a78ccc",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "512ae6e3-8f75-492b-a874-a262199b4dc3",
+			"key": "basicRestFul",
+			"value": "127.0.0.1:3005"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

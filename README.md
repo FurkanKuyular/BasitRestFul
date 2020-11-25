@@ -22,7 +22,7 @@ Protip: Though the bundle doesn't enforce you to do so, it is highly recommended
 
 **Usage**
 
-Import collection.json file to postman. You can find collection file under the postman folder
+Import collection.json file to postman. BasicRestFul.postman_collection.json
 
 Open cmd file location:
 
